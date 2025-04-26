@@ -1,0 +1,28 @@
+.button {
+    padding: 8px 12px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.primary {
+    border: 1px solid #222222;
+    color: #222222;
+    background-color: transparent;
+}
+
+.secondary {
+    border: 1px solid #c5c5c5;
+    color: #c5c5c5;
+    background-color: transparent;
+}
+
+.danger {
+    background-color: #ff2e2e;
+    color: #fff;
+    border: none;
+}

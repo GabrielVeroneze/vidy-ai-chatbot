@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![](thumbnail.png)
 
-## Getting Started
+![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
 
-First, run the development server:
+# Curso: Vercel IA SDK
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Neste curso, você aprenderá a integrar o Vercel AI SDK em uma aplicação Next.js para construir um assistente inteligente que interage com usuários de forma dinâmica. O projeto do curso, chamado Vidy, será um assistente especializado em recomendações de filmes, demonstrando como utilizar IA e SSR (Server-Side Rendering) juntos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔨 Funcionalidades do projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Durante o curso, você implementará:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Um assistente de IA capaz de responder perguntas sobre filmes.
+- Implementação de respostas em tempo real utilizando streaming de respostas do modelo de IA.
+- Integração com modelos de linguagem avançados (como GPT) para processar e responder perguntas.
+- Rate limiting para controlar o fluxo de requisições ao assistente.
 
-## Learn More
+## ✔️ Técnicas e tecnologias utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+Você irá trabalhar com as seguintes tecnologias e conceitos:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js**: Framework React com funcionalidades de SSR e API Routes.
+- **Vercel AI SDK**: SDK para construir e integrar assistentes de IA em aplicações web.
+- **Redis e upstash**: Para gerenciamento de rate limiting e controle de acessos.
+- **Logs e tratamento de erros**: Implementação de um sistema robusto de gerenciamento de logs e controle de erros.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 O que você vai aprender
 
-## Deploy on Vercel
+Ao longo do curso, você aprenderá a:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Criar um assistente de IA utilizando o modelo GPT.
+- Implementar rate limiting para proteger suas rotas e limitar o número de requisições.
+- Configurar o SDK da Vercel AI para construir fluxos de comunicação entre o assistente e os usuários.
+- Gerenciar logs e erros.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Como executar o projeto
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. Clone o repositório para sua máquina.
+2. Abra o projeto no seu editor de código preferido.
+3. No terminal, navegue até o diretório do projeto.
+4. Execute o comando `npm install` para instalar as dependências.
+5. Inicie o servidor de desenvolvimento com `npm run dev`.
+6. Acesse `http://localhost:3000` no seu navegador para visualizar o projeto.
+
+## 📚 Mais Informações
+
+Se você deseja mergulhar fundo no desenvolvimento de assistentes inteligentes com IA, SSR e integração de APIs, [acesse o curso]() e acompanhe todo o processo de desenvolvimento do Vidy!
