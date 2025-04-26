@@ -1,12 +1,8 @@
 'use client'
 
-import Button from '../Button'
-import ChatBubble from '../ChatBubble'
-import { ChatForm } from '../ChatForm'
-import { ChatHeader } from '../ChatHeader'
-import { IconStop } from '../Icons'
-import { Loader } from '../Loader'
-import { RetryButton } from '../RetryButton'
+import { ChatHeader } from '@/components/ChatHeader'
+import { ChatBubble } from '@/components/ChatBubble'
+import { ChatForm } from '@/components/ChatForm'
 import styles from './container.module.css'
 
 export const ChatContainer = () => {

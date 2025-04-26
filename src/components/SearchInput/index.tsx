@@ -1,11 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react'
-import styles from './searchInput.module.css'
 import Image from 'next/image'
-
 import icon from './search.png'
+import styles from './searchInput.module.css'
 
-const SearchInput = () => {
+export const SearchInput = () => {
     return (
         <div className={styles.inputGroup}>
             <input
@@ -22,5 +19,3 @@ const SearchInput = () => {
         </div>
     )
 }
-
-export default SearchInput

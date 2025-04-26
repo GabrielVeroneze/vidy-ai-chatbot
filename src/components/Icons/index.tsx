@@ -79,6 +79,7 @@ export const IconStop = () => {
         </svg>
     )
 }
+
 export const IconCamera = () => {
     return (
         <svg

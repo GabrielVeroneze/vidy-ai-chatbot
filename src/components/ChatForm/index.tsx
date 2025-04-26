@@ -1,5 +1,5 @@
+import { IconSend } from '@/components/Icons'
 import styles from './chat.module.css'
-import { IconSend } from '../Icons'
 
 export const ChatForm = () => {
     return (

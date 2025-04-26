@@ -1,4 +1,4 @@
-import { IconReload } from '../Icons'
+import { IconReload } from '@/components/Icons'
 import styles from './retry-button.module.css'
 
 export const RetryButton = ({ ...props }) => {

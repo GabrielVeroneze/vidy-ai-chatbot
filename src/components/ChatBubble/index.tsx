@@ -1,11 +1,11 @@
 'use client'
 
-import Button from '../Button'
-import { IconClose } from '../Icons'
-import styles from './chatBubble.module.css'
+import { Button } from '@/components/Button'
+import { IconClose } from '@/components/Icons'
 import ReactMarkdown from 'react-markdown'
+import styles from './chatBubble.module.css'
 
-export default function ChatBubble({ message, onRemove, isUser = false }) {
+export const ChatBubble = ({ message, onRemove, isUser = false }) => {
     return (
         <div
             className={`${styles.bubbleWrapper} ${isUser ? styles.user : styles.bot}`}

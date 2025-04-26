@@ -1,7 +1,5 @@
 import Image from 'next/image'
-
 import vidy from './vidy.svg'
-
 import styles from './header.module.css'
 
 export const ChatHeader = () => {
