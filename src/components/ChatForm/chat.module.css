@@ -1,25 +1,25 @@
 .form {
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
 }
 .input {
-    flex-grow: 1;
     background-color: transparent;
     border: 1px solid #c5c5c5;
-    border-radius: 8px;
-    padding: 16px;
-    font-size: 18px;
+    border-radius: 0.5rem;
     color: #c5c5c5;
+    flex-grow: 1;
+    font-size: 1.125rem;
+    padding: 1rem;
 }
 .btn {
-    cursor: pointer;
-    background-color: #c5c5c5;
-    border-radius: 100%;
-    padding: 16px;
-    border: none;
-    display: flex;
     align-items: center;
+    background-color: #c5c5c5;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 
 .btn:hover {
@@ -27,6 +27,6 @@
 }
 
 .btn:disabled {
-    opacity: 0.5;
     cursor: not-allowed;
+    opacity: 0.5;
 }

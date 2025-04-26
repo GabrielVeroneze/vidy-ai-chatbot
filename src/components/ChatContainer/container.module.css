@@ -1,9 +1,9 @@
 .container {
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
     height: calc(100vh - 140px);
+    margin-top: 1rem;
 }
 
 .chat {

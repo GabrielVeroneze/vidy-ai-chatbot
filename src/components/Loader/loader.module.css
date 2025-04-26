@@ -1,38 +1,30 @@
 .loader {
-    width: 15px;
+    animation: l5 1s infinite linear alternate;
     aspect-ratio: 1;
     border-radius: 50%;
-    animation: l5 1s infinite linear alternate;
-    margin-left: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+    margin-left: 1.25rem;
+    width: 15px;
 }
 
 @keyframes l5 {
     0% {
-        box-shadow:
-            20px 0 #ececec,
-            -20px 0 #ececec20;
         background: #ececec;
+        box-shadow: 20px 0 #ececec, -20px 0 #ececec20;
     }
 
     33% {
-        box-shadow:
-            20px 0 #ececec,
-            -20px 0 #ececec20;
         background: #ececec20;
+        box-shadow: 20px 0 #ececec, -20px 0 #ececec20;
     }
 
     66% {
-        box-shadow:
-            20px 0 #ececec20,
-            -20px 0 #ececec;
         background: #ececec20;
+        box-shadow: 20px 0 #ececec20, -20px 0 #ececec;
     }
 
     100% {
-        box-shadow:
-            20px 0 #ececec20,
-            -20px 0 #ececec;
         background: #ececec;
+        box-shadow: 20px 0 #ececec20, -20px 0 #ececec;
     }
 }
