@@ -1,3 +1,7 @@
+interface IconCloseProps {
+    fill: string
+}
+
 export const IconBell = () => {
     return (
         <svg
@@ -15,7 +19,7 @@ export const IconBell = () => {
     )
 }
 
-export const IconClose = ({ fill }) => {
+export const IconClose = ({ fill }: IconCloseProps) => {
     return (
         <svg
             width="10"

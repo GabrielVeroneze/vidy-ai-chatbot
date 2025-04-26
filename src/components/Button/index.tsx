@@ -1,6 +1,12 @@
+import { ButtonHTMLAttributes } from 'react'
 import styles from './button.module.css'
 
-export const Button = ({ variant = 'primary', children, ...props }) => {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: 'primary' | 'secondary' | 'danger'
+    children: React.ReactNode
+}
+
+export const Button = ({ variant = 'primary', children, ...props }: ButtonProps) => {
     const variantClass = {
         primary: styles.primary,
         secondary: styles.secondary,

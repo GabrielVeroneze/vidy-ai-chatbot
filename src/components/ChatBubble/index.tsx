@@ -5,7 +5,13 @@ import { IconClose } from '@/components/Icons'
 import ReactMarkdown from 'react-markdown'
 import styles from './chatBubble.module.css'
 
-export const ChatBubble = ({ message, onRemove, isUser = false }) => {
+interface ChatBubbleProps {
+    message: string
+    onRemove: () => void
+    isUser?: boolean
+}
+
+export const ChatBubble = ({ message, onRemove, isUser = false }: ChatBubbleProps) => {
     return (
         <div
             className={`${styles.bubbleWrapper} ${isUser ? styles.user : styles.bot}`}
