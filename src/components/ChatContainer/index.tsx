@@ -12,12 +12,17 @@ import styles from './container.module.css'
 export const ChatContainer = () => {
     const {
         messages,
+        setMessages,
         input,
         handleInputChange,
         handleSubmit,
         status,
         stop,
     } = useChat()
+
+    function removeMessage(id: string) {
+        setMessages(messages.filter((msg) => msg.id !== id))
+    }
 
     return (
         <section className={styles.container}>
@@ -28,7 +33,7 @@ export const ChatContainer = () => {
                         key={msg.id}
                         message={msg.content}
                         isUser={msg.role === 'user'}
-                        onRemove={() => console.log('remove message', msg.id)}
+                        onRemove={() => removeMessage(msg.id)}
                     />
                 ))}
             </div>
