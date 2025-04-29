@@ -4,10 +4,17 @@ import { useChat } from '@ai-sdk/react'
 import { ChatHeader } from '@/components/ChatHeader'
 import { ChatBubble } from '@/components/ChatBubble'
 import { ChatForm } from '@/components/ChatForm'
+import { Loader } from '@/components/Loader'
 import styles from './container.module.css'
 
 export const ChatContainer = () => {
-    const { messages, input, handleInputChange, handleSubmit } = useChat()
+    const {
+        messages,
+        input,
+        handleInputChange,
+        handleSubmit,
+        status,
+    } = useChat()
 
     return (
         <section className={styles.container}>
@@ -22,6 +29,11 @@ export const ChatContainer = () => {
                     />
                 ))}
             </div>
+            {status === 'streaming' && (
+                <div>
+                    <Loader />
+                </div>
+            )}
             <ChatForm
                 input={input}
                 onInputChange={handleInputChange}
