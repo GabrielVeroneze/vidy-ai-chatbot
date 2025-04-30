@@ -19,5 +19,27 @@ export async function POST(request: Request) {
         `,
     })
 
-    return result.toDataStreamResponse()
+    return result.toDataStreamResponse({
+        getErrorMessage: (error) => {
+            if (error === null) {
+                console.error('[POST] :: toDataStreamResponse - Erro recebido como nulo, o que não deveria acontecer.')
+
+                return 'Algum erro inesperado aconteceu!'
+            }
+
+            if (typeof error === 'string') {
+                console.error('[POST] :: toDataStreamResponse - Erro recebido como string:', error)
+
+                return error
+            }
+
+            if (error instanceof Error) {
+                console.error('[POST] :: toDataStreamResponse - Erro recebido como instância de Error:', error)
+
+                return error.message
+            }
+
+            return JSON.stringify(error)
+        },
+    })
 }
