@@ -20,6 +20,7 @@ export const ChatContainer = () => {
         status,
         stop,
         reload,
+        error,
     } = useChat()
 
     function removeMessage(id: string) {
@@ -46,6 +47,9 @@ export const ChatContainer = () => {
                         <IconStop /> parar
                     </Button>
                 </div>
+            )}
+            {error && (
+                <p>Ops! Alguma coisa deu errado!</p>
             )}
             {(status === 'ready' && messages.length > 0) && (
                 <div>
