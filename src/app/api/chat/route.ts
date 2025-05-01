@@ -9,13 +9,17 @@ type RequestBody = {
     messages: UIMessage[]
 }
 
+interface ExtendedRequest extends NextRequest {
+    ip?: string
+}
+
 const ratelimit = new Ratelimit({
     redis: kv,
     limiter: Ratelimit.fixedWindow(2, '60s'),
 })
 
 export async function POST(request: NextRequest) {
-    const ip = request.ip ?? 'ip'
+    const ip = (request as ExtendedRequest).ip ?? 'ip'
     const { success } = await ratelimit.limit(ip)
 
     if (!success) {
