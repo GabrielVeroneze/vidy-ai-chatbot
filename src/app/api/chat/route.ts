@@ -1,3 +1,4 @@
+import { NextRequest } from 'next/server'
 import { convertToCoreMessages, streamText, UIMessage } from 'ai'
 import { openai } from '@ai-sdk/openai'
 import { Ratelimit } from '@upstash/ratelimit'
@@ -10,10 +11,17 @@ type RequestBody = {
 
 const ratelimit = new Ratelimit({
     redis: kv,
-    limiter: Ratelimit.fixedWindow(5, '30s'),
+    limiter: Ratelimit.fixedWindow(2, '60s'),
 })
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
+    const ip = request.ip ?? 'ip'
+    const { success } = await ratelimit.limit(ip)
+
+    if (!success) {
+        return new Response('Limite de mensagens atingido!', { status: 429 })
+    }
+
     const { messages }: RequestBody = await request.json()
 
     const result = await streamText({
