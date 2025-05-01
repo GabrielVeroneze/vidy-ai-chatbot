@@ -1,10 +1,17 @@
 import { convertToCoreMessages, streamText, UIMessage } from 'ai'
 import { openai } from '@ai-sdk/openai'
+import { Ratelimit } from '@upstash/ratelimit'
+import { kv } from '@vercel/kv'
 
 type RequestBody = {
     id: string
     messages: UIMessage[]
 }
+
+const ratelimit = new Ratelimit({
+    redis: kv,
+    limiter: Ratelimit.fixedWindow(5, '30s'),
+})
 
 export async function POST(request: Request) {
     const { messages }: RequestBody = await request.json()
